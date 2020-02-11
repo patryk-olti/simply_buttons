@@ -1,0 +1,292 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* First button */
+.one{
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    padding: 20px 40px;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: transparent;
+    border: 2px solid black;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.one::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 10px;
+    background-color: teal;
+    z-index: -1;
+    transition: left .25s linear, height .25s .25s linear;
+}
+
+.one:hover::after{
+    left: 0;
+    height: 100%;
+}
+
+/* Second button */
+.two{
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    padding: 20px 40px;
+    font-size: 30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background-color: transparent;
+    font-weight: 700;
+    border: 0px;
+    transition: .3s linear .1s;
+    cursor: pointer;
+}
+
+.two::after{
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 20%;
+    background-color: tomato;
+    z-index: -1;
+    transition: .3s;
+}
+
+.two:hover{
+    color: white;
+}
+
+.two:hover::after{
+    width: 100%;
+}
+
+/* Third button */
+.three{
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    padding: 20px 40px;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: transparent;
+    border: 0px;
+    cursor: pointer;
+}
+
+.three div{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 5px;
+    width: 0px;
+    background-color: black;
+    transition: .2s linear;
+}
+
+.three:hover div{
+    width: 100%;
+}
+
+/* Fourth */
+.four{
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    padding: 20px 40px;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 2px solid black;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.four::after{
+    content: "";
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    height: 0%;
+    width: 0%;
+    transition: .2s linear;
+    z-index: -1;
+}
+
+.four:hover::after{
+    width: 100%;
+    height: 100%;
+    background-color: violet;
+}
+
+/* Fiveth */
+.five{
+    position: absolute;
+    top: 45%;
+    left: 10%;
+    padding: 20px 40px;
+    font-size: 30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background-color: transparent;
+    font-weight: 700;
+    border: 2px solid black;
+    box-shadow: 0 0 0 5px white, 0 0 0 7px black;
+    border-radius: 15%;
+    overflow: hidden;
+    transition: .2s linear;
+    cursor: pointer;
+}
+
+.five::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 0%;
+    width: 100%;
+    background-color: royalblue;
+    transition: .2s linear;
+    z-index: -1;
+}
+
+.five:hover{
+    border-radius: 0%;
+}
+
+.five:hover::before{
+    height: 100%;
+}
+
+/* Sixth */
+.six{
+    position: absolute;
+    top: 55%;
+    left: 10%;
+    padding: 15px 50px;
+    font-size: 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-color: white;
+    border: 5px solid black;
+    cursor: pointer;
+    animation: 2s sixShake infinite linear;
+    transition: 0.2s linear;
+}
+
+.six:hover{
+    animation: none;
+    text-decoration: underline;
+    background-color: silver;
+}
+
+@keyframes sixShake {
+    0%{transform: translateX(0%);}
+    90%{transform: translateX(0%);}
+    91%{transform: translateX(5%);}
+    92%{transform: translateX(-5%);}
+    93%{transform: translateX(5%);}
+    94%{transform: translateX(-5%);}
+    95%{transform: translateX(5%);}
+    96%{transform: translateX(-5%);}
+    97%{transform: translateX(5%);}
+    98%{transform: translateX(-5%);}
+    99%{transform: translateX(5%);}
+    100%{transform: translateX(-5%);}
+}
+
+/* Seventh */
+.seven{
+    position: absolute;
+    top: 65%;
+    left: 10%;
+    padding: 15px 50px;
+    font-size: 30px;
+    text-transform: uppercase;
+    background-color: rgb(67, 93, 179);
+    color: white;
+    font-weight: 700;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.seven:hover{
+    background-color: royalblue;
+}
+
+/* Eightth */
+.eight{
+    position: absolute;
+    top: 75%;
+    left: 10%;
+    padding: 15px 50px;
+    font-size: 30px;
+    text-transform: uppercase;
+    background-color: rgb(30, 54, 131);
+    color: white;
+    letter-spacing: 4px;
+    font-weight: 700;
+    border: 2px solid black;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.eight p{
+    transition: 1s;
+}
+
+.eight:hover p{
+    transform: translateX(-150%);
+}
+
+.eight:hover{
+    background-color: skyblue;
+}
+
+
+/* nineth */
+.nine{
+    position: absolute;
+    top: 85%;
+    left: 10%;
+    padding: 20px 40px;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: yellow;
+    background-color: black;
+    box-shadow: 0 0 0 5px yellow, 0 0 0 10px black;
+    border-radius: 20px;
+    transition: .2s linear;
+    cursor: pointer;
+}
+
+
+.nine:hover{
+    box-shadow: 0 0 0 10px yellow, 0 0 0 15px black;
+}
+
+
+
+
+
+
+
